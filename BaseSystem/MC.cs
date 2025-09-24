@@ -1,19 +1,25 @@
-﻿namespace BaseSystem
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BaseSystem
 {
-    public class Car : Vehicle
+    public class MC :Vehicle
     {
         /// <summary>
-        /// License plate of the car
+        /// License plate of the motorcycle
         /// </summary>
         public string LicensePlate { get; set; }
 
         /// <summary>
-        /// Date the car crossed the bridge
+        /// Date the motorcycle crossed the bridge
         /// </summary>
         public DateTime Date { get; set; }
 
         /// <summary>
-        /// Method for getting the price of the car crossing the bridge
+        /// Method for getting the price of the motorcycle crossing the bridge
         /// </summary>
         /// 
         /// <returns>
@@ -21,7 +27,7 @@
         /// </returns>
         public double Price()
         {
-            return 230;
+            return 120;
         }
 
         /// <summary>
@@ -29,18 +35,18 @@
         /// </summary>
         /// 
         /// <returns>
-        /// "Car"
+        /// "MC"
         /// </returns>
         public string VehicleType()
         {
-            return "Car";
+            return "MC";
         }
 
         /// <summary>
         /// Default constructor
         /// Sets LicensePlate to an empty string
         /// </summary>
-        public Car()
+        public MC()
         {
             LicensePlate = string.Empty;
         }
@@ -49,9 +55,9 @@
         /// <summary>
         /// Constructor that sets the values of Date and LicensePlate
         /// </summary>
-        /// <param name="licensePlate">License plate of the car</param>
-        /// <param name="date">Date the car crossed the bridge</param>
-        public Car(string licensePlate, DateTime date)
+        /// <param name="licensePlate">License plate of the motorcycle</param>
+        /// <param name="date">Date the motorcycle crossed the bridge</param>
+        public MC(string licensePlate, DateTime date)
         {
             LicensePlate = licensePlate;
             Date = date;
