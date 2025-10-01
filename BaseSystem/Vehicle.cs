@@ -19,7 +19,7 @@ namespace BaseSystem
             } 
             set 
             {
-                if (!(value.Length > 7)) _licensePlate = value;
+                if (!(value.Replace(" ", "").Length > 7)) _licensePlate = value;
                 else throw new ArgumentException("License plate cannot be longer than 7 characters");
             }
         }
@@ -32,22 +32,10 @@ namespace BaseSystem
         public abstract double Price();
         public abstract string VehicleType();
 
-        public Vehicle()
-        {
-            LicensePlate = "";
-        }
-
         public Vehicle(string licensePlate, DateTime date)
         {
-            try
-            {
-                LicensePlate = licensePlate;
-                Date = date;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
+            LicensePlate = licensePlate;
+            Date = date;
         }
     }
 }

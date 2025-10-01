@@ -32,14 +32,6 @@ namespace BaseSystem
             return "MC";
         }
 
-        /// <summary>
-        /// Default constructor
-        /// Sets LicensePlate to an empty string
-        /// </summary>
-        public MC() : base()
-        {
-        }
-
 
         /// <summary>
         /// Constructor that sets the values of Date and LicensePlate

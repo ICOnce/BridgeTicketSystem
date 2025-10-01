@@ -26,14 +26,6 @@
             return "Car";
         }
 
-        /// <summary>
-        /// Default constructor
-        /// Sets LicensePlate to an empty string
-        /// </summary>
-        public Car() : base()
-        {
-        }
-
 
         /// <summary>
         /// Constructor that sets the values of Date and LicensePlate

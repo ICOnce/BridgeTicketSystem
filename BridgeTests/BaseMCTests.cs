@@ -5,29 +5,26 @@ namespace BridgeTests;
 [TestClass]
 public class BaseMCTests
 {
-    [TestMethod]
-    public void BaseMCLicensePlateEmptyTest()
+    [DataTestMethod]
+    [DataRow("AB12123", false)]
+    [DataRow("AB121234", true)]
+    public void BaseMCLicensePlateTest(string licensePlate, bool throwsError)
     {
         //Arrange
-        MC MC = new MC();
-
+        Action action = () =>
+        {
+            new MC(licensePlate, new DateTime());
+        };
         //Act
 
         //Assert
-        Assert.AreEqual("", MC.LicensePlate);
-    }
+        if (throwsError) Assert.ThrowsException<ArgumentException>(action);
+        else
+        {
+            MC mc = new MC(licensePlate, new DateTime());
+            Assert.AreEqual(licensePlate, mc.LicensePlate);
+        }
 
-    [TestMethod]
-    public void BaseMCLicensePlateTest()
-    {
-        //Arrange
-        MC mc = new MC("LA 123 12", new DateTime());
-
-        //Act
-        string licensePlate = "LA 123 12";
-
-        //Assert
-        Assert.AreEqual(licensePlate, mc.LicensePlate);
     }
 
     [TestMethod]
@@ -47,7 +44,7 @@ public class BaseMCTests
     public void BaseMCPriceTest()
     {
         //Arrange
-        MC mc = new MC();
+        MC mc = new MC("",new DateTime());
 
         //Act
         double price = mc.Price();
@@ -60,7 +57,7 @@ public class BaseMCTests
     public void BaseMCVehicleTypeTest()
     {
         //Arrange
-        MC mc = new MC();
+        MC mc = new MC("", new DateTime());
 
         //Act
         string type = mc.VehicleType();
