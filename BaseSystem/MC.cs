@@ -9,23 +9,13 @@ namespace BaseSystem
     public class MC :Vehicle
     {
         /// <summary>
-        /// License plate of the motorcycle
-        /// </summary>
-        public string LicensePlate { get; set; }
-
-        /// <summary>
-        /// Date the motorcycle crossed the bridge
-        /// </summary>
-        public DateTime Date { get; set; }
-
-        /// <summary>
         /// Method for getting the price of the motorcycle crossing the bridge
         /// </summary>
         /// 
         /// <returns>
         /// 230
         /// </returns>
-        public double Price()
+        public override double Price()
         {
             return 120;
         }
@@ -37,7 +27,7 @@ namespace BaseSystem
         /// <returns>
         /// "MC"
         /// </returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
             return "MC";
         }
@@ -46,9 +36,8 @@ namespace BaseSystem
         /// Default constructor
         /// Sets LicensePlate to an empty string
         /// </summary>
-        public MC()
+        public MC() : base()
         {
-            LicensePlate = string.Empty;
         }
 
 
@@ -57,10 +46,8 @@ namespace BaseSystem
         /// </summary>
         /// <param name="licensePlate">License plate of the motorcycle</param>
         /// <param name="date">Date the motorcycle crossed the bridge</param>
-        public MC(string licensePlate, DateTime date)
+        public MC(string licensePlate, DateTime date) : base(licensePlate, date)
         {
-            LicensePlate = licensePlate;
-            Date = date;
         }
     }
 }

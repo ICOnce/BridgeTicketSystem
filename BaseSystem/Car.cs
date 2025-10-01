@@ -3,23 +3,13 @@
     public class Car : Vehicle
     {
         /// <summary>
-        /// License plate of the car
-        /// </summary>
-        public string LicensePlate { get; set; }
-
-        /// <summary>
-        /// Date the car crossed the bridge
-        /// </summary>
-        public DateTime Date { get; set; }
-
-        /// <summary>
         /// Method for getting the price of the car crossing the bridge
         /// </summary>
         /// 
         /// <returns>
         /// 230
         /// </returns>
-        public double Price()
+        public override double Price()
         {
             return 230;
         }
@@ -31,7 +21,7 @@
         /// <returns>
         /// "Car"
         /// </returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
             return "Car";
         }
@@ -40,9 +30,8 @@
         /// Default constructor
         /// Sets LicensePlate to an empty string
         /// </summary>
-        public Car()
+        public Car() : base()
         {
-            LicensePlate = string.Empty;
         }
 
 
@@ -51,10 +40,8 @@
         /// </summary>
         /// <param name="licensePlate">License plate of the car</param>
         /// <param name="date">Date the car crossed the bridge</param>
-        public Car(string licensePlate, DateTime date)
+        public Car(string licensePlate, DateTime date): base(licensePlate, date)
         {
-            LicensePlate = licensePlate;
-            Date = date;
         }
     }
 }
