@@ -4,7 +4,16 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="ExternalDLLs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BaseSystem">
+      <HintPath>ExternalDLLs\BaseSystem.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 
 </Project>

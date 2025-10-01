@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BaseSystem</name>
+    </assembly>
+    <members>
+        <member name="M:BaseSystem.Car.Price">
+            <summary>
+            Method for getting the price of the car crossing the bridge
+            </summary>
+            
+            <returns>
+            230
+            </returns>
+        </member>
+        <member name="M:BaseSystem.Car.VehicleType">
+            <summary>
+            Method for getting the vehicle type
+            </summary>
+            
+            <returns>
+            "Car"
+            </returns>
+        </member>
+        <member name="M:BaseSystem.Car.#ctor(System.String,System.DateTime)">
+            <summary>
+            Constructor that sets the values of Date and LicensePlate
+            </summary>
+            <param name="licensePlate">License plate of the car</param>
+            <param name="date">Date the car crossed the bridge</param>
+        </member>
+        <member name="M:BaseSystem.Car.#ctor(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            Constructor for setting the date, licenseplate and Brobizz properties
+            </summary>
+            <param name="licensePlate"></param>
+            <param name="date"></param>
+            <param name="brobizzUsed"></param>
+        </member>
+        <member name="M:BaseSystem.MC.Price">
+            <summary>
+            Method for getting the price of the motorcycle crossing the bridge
+            </summary>
+            
+            <returns>
+            230
+            </returns>
+        </member>
+        <member name="M:BaseSystem.MC.VehicleType">
+            <summary>
+            Method for getting the vehicle type
+            </summary>
+            
+            <returns>
+            "MC"
+            </returns>
+        </member>
+        <member name="M:BaseSystem.MC.#ctor(System.String,System.DateTime)">
+            <summary>
+            Constructor that sets the values of Date and LicensePlate
+            </summary>
+            <param name="licensePlate">License plate of the motorcycle</param>
+            <param name="date">Date the motorcycle crossed the bridge</param>
+        </member>
+        <member name="M:BaseSystem.MC.#ctor(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            Constructor for setting the date, licenseplate and Brobizz properties
+            </summary>
+            <param name="licensePlate"></param>
+            <param name="date"></param>
+            <param name="brobizzUsed"></param>
+        </member>
+        <member name="P:BaseSystem.Vehicle.LicensePlate">
+            <summary>
+            License plate of the vehicle
+            </summary>
+        </member>
+        <member name="P:BaseSystem.Vehicle.WasBrobizzUsed">
+            <summary>
+            Specifies whether or not a Brobizz was used when crossing the bridge
+            </summary>
+        </member>
+        <member name="P:BaseSystem.Vehicle.Date">
+            <summary>
+            Date the vehicle crossed the bridge
+            </summary>
+        </member>
+    </members>
+</doc>
