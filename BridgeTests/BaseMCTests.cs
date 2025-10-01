@@ -40,17 +40,23 @@ public class BaseMCTests
         Assert.AreEqual(date, mc.Date);
     }
 
-    [TestMethod]
-    public void BaseMCPriceTest()
+    [DataTestMethod]
+    [DataRow(false)]
+    [DataRow(true)]
+    public void BaseMCPriceTest(bool brobizzUsed)
     {
         //Arrange
-        MC mc = new MC("",new DateTime());
+        MC mc = new MC("",new DateTime(), brobizzUsed);
 
         //Act
         double price = mc.Price();
 
         //Assert
-        Assert.AreEqual(120, price);
+        if (brobizzUsed)
+        {
+            Assert.AreEqual(108, price);
+        }
+        else Assert.AreEqual(120, price);
     }
 
     [TestMethod]

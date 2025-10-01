@@ -17,6 +17,7 @@ namespace BaseSystem
         /// </returns>
         public override double Price()
         {
+            if (WasBrobizzUsed) return 120 * 0.9;
             return 120;
         }
 
@@ -39,6 +40,16 @@ namespace BaseSystem
         /// <param name="licensePlate">License plate of the motorcycle</param>
         /// <param name="date">Date the motorcycle crossed the bridge</param>
         public MC(string licensePlate, DateTime date) : base(licensePlate, date)
+        {
+        }
+
+        /// <summary>
+        /// Constructor for setting the date, licenseplate and Brobizz properties
+        /// </summary>
+        /// <param name="licensePlate"></param>
+        /// <param name="date"></param>
+        /// <param name="brobizzUsed"></param>
+        public MC(string licensePlate, DateTime date, bool brobizzUsed) : base(licensePlate, date, brobizzUsed)
         {
         }
     }

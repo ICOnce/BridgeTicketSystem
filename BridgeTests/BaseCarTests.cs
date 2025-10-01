@@ -40,17 +40,23 @@ namespace BridgeTests
             Assert.AreEqual(date, car.Date);
         }
 
-        [TestMethod]
-        public void BaseCarPriceTest()
+        [DataTestMethod]
+        [DataRow(false)]
+        [DataRow(true)]
+        public void BaseCarPriceTest(bool brobizzUsed)
         {
             //Arrange
-            Car car = new Car("", new DateTime());
+            Car car = new Car("", new DateTime(), brobizzUsed);
 
             //Act
             double price = car.Price();
 
             //Assert
-            Assert.AreEqual(230, price);
+            if (brobizzUsed)
+            {
+                Assert.AreEqual(207, price);
+            }
+            else Assert.AreEqual(230, price);
         }
 
         [TestMethod]
